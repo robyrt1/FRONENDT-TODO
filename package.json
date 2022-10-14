@@ -1,0 +1,13 @@
+{
+  "author": "Robert Pinto Mendes",
+  "name": "frontend-todo",
+  "version": "1.0.0",
+  "main": "index.html",
+  "license": "MIT",
+  "scripts": {
+    "start": "browser-sync start --server --files . --port 8080"
+  },
+  "dependencies": {
+    "browser-sync": "^2.27.10"
+  }
+}

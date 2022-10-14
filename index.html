@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="./js/constants/api.js"></script>
+    <script src="./js/libs/axios-1.0.0-alpha.1.js"></script>
+    <link rel="stylesheet" href="./semantic-ui/semantic.css" />
+    <link rel="stylesheet" href="./CSS/index.css" />
+
+    <script src="./js/libs/jquery-3.1.1.js"></script>
+    <script src="./semantic-ui/semantic.js"></script>
+
+    <script src="./js/pages/todo/todo.ui.js"></script>
+    <script src="./js/pages/todo/todo.op.js"></script>
+    <script src="./js/pages/todo/index.js"></script>
+
+    <script src="./js/services/todo.service.js"></script>
+
+    <script src="./js/index.js"></script>
+  </head>
+  <body>
+    <div class="centered">
+      <div class="ui card" style="width: 100%">
+        <div class="content">
+          <div class="header">To-do List<i class="list icon"></i></div>
+        </div>
+        <div class="content">
+          <!-- Table Content START-->
+          <table class="ui single line table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tableTbody"></tbody>
+          </table>
+          <!-- Table Content END-->
+        </div>
+        <div class="extra content">
+          <button onclick="openModal('show', 'add')" class="ui green button">
+            <i class="plus icon"></i> Add to-do
+          </button>
+          <br />
+          <br />
+          <div id="msg"></div>
+        </div>
+
+        <!-- Modal Content Start-->
+        <div class="ui modal" style="width: 300px">
+          <div id="todoModalHeader" class="header"></div>
+          <div class="image content">
+            <div class="description">
+              <form class="ui form">
+                <div class="field">
+                  <label>To-do name</label>
+                  <input id="todoname" type="text" placeholder="todo name" />
+                </div>
+                <div class="field">
+                  <label>To-do date</label>
+                  <input id="tododate" type="text" placeholder="todo name" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="actions">
+            <div onclick="saveTodo()" class="ui green deny button">
+              <i class="check icon"></i>
+            </div>
+            <div onclick="cleanTododForm()" class="ui black deny button">
+              <i class="x icon"></i>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Content END-->
+      </div>
+    </div>
+  </body>
+</html>
