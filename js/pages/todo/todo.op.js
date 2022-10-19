@@ -1,8 +1,8 @@
-
-const saveTodo = () =>{
+saveTodo = () =>{
     if(updateId){
         updateTodo()
         updateId = false;
+    }else{
         addTodo()
     }
 }
@@ -18,4 +18,6 @@ const addTodo = () =>{
         .catch(handleErrors)
         .finally( openModal("hide", "add"))
         .finally(handleFinally);
+        
 }
+

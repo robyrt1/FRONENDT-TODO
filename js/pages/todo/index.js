@@ -1,4 +1,4 @@
-let updateId = false;
+let updateId=false;
 const todoInit = () => {
     loadTableData()
 }

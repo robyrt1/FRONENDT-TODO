@@ -4,31 +4,33 @@ const cleanTododForm = () => {
 };
 
 const showSucessMsg = () => {
-  $("#msg").append(`
-        <div class="ui positive message">
-            <i class="close icon"></i>
-            <div>
+  $("#msg").append( `
+        <div class="    ui positive message">
+        <i class="close icon"></i>
+            <div>   
                 Sucess
-            <div>
-        </div>
+            <div>   
+
+        </div>  
     `);
-};
+};  
 
 const showErrorMsg = () => {
   $("#msg").append(`
-          <div class="ui negative message">
-              <i class="close icon"></i>
-              <div>
+              <div class="ui negative message">
+            <i class="close icon"></i>
+                  <div>
                   Error
-              <div>
-          </div>
+              <d    iv>
+
+          </d>                                                                                                                                                                                                                                                                                                                                      
       `);
 };
 
 const closeMsg = (time) => {
     setTimeout(() =>{
         $("#msg").empty();
-    }, time)
+    }, time);
 };
 
 const loadTableData = async () => {
